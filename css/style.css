@@ -1,0 +1,138 @@
+* {
+    font-family: helvetica;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(45deg, #15153d, #12273b);
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #3c7bb6ea;
+    text-shadow: 1px 1px 3px rgba(44, 49, 65, 0.918);
+}
+
+main{
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1e2700;
+    gap: .5rem;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #38f2ff;
+}
+
+
+input, textarea, select{
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: #272530;
+    padding: 15px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    border: 1px solid #2f2c45;
+    color: #fff;  
+}
+
+#progress-bar{
+    width: 100%;
+    height: 30px;
+    background-color: #0e0f49;
+    border-radius: 15px;
+}
+
+#progress-bar::-webkit-progress-bar{
+    background-color: #171846;
+    border-radius: 15px;
+}
+
+#progress-bar::-webkit-progress-value{
+    background-color: #24546b;
+    border-radius: 15px;
+}
+
+.enviar{
+    border: 1px solid #2f2c45;
+    padding: 15px;
+    background-color: #2f2c45;
+    color: #38f2ff;
+}
+
+.label-content{
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #38f2ff;
+    user-select: none;
+}
+
+.input-content{
+    position: relative;
+}
+
+.input-style{
+    border: 2px solid #2f2c45;
+    outline: none;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.label-content::before{
+    content: '';
+    height: 5px;
+    background: #1b1924;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.input-style:focus{
+    border: 2px solid #38f2ff;
+}
+
+.input-style:focus + .label-content{
+    top: -10px;
+    color: #38f2ff;
+    font-size: 18px;
+    text-shadow: 1.5px 1px 2px rgba(8, 8, 8, 0.493);
+}
+
+.input-style::placeholder{
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.input-style:focus::placeholder{
+    opacity: 1;
+}
+
+.input-style:not(:placeholder-shown) + .label-content{
+    top: -10px;
+    color: #38f2ff;
+    font-size: 18;
+}
+
+footer{
+    font-style: italic;
+    text-align: center;
+    color: #38f2ff;
+    margin-top: 20px;
+}

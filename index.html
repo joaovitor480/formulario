@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>css</title>
+</head>
+<body>
+    
+    <header><h1>Form com validação JavaScript</h1></header>
+
+    <main>
+
+        
+
+        <form id="container">
+
+            <progress max="100" value="0" id="progress-bar"></progress>
+
+                <div class="input-content">
+                    <input type="text"
+                    class="input-style inputbox" id="name" placeholder="digite seu nome">
+                    <label for="text-input" class="label-content">Name:</label>
+                </div>
+        
+
+            <div class="input-content">
+                <input type="email" name="email" id="email" class="input-style inputbox" placeholder="Digite seu email">
+                <label for="email" class="label-content">Email:</label>
+            </div>
+
+            <div class="input-content">
+                <input type="password" name="senha" id="senha" class="input-style inputbox" placeholder="Digite sua senha">
+                <label for="senha" class="label-content">Senha:</label>
+            </div>
+                
+            
+              
+            <label for="job">Situação de Trabalho:</label>
+            <select name="job" id="job" class="input-style inputbox">
+                <option value="" disabled selected>Está procurando emprego?</option>
+                <option value="yes">Sim</option>
+                <option value="no">Não</option>
+            </select>
+                
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" class="input-style inputbox" placeholder="Escreva sua mensagem"></textarea>
+                
+            <button class="enviar">Enviar</button>
+            
+        </form>
+    </main>
+
+    <footer>&copy;João Vitor da Silva</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
